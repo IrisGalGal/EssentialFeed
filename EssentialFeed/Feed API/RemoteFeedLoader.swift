@@ -2,7 +2,7 @@
 //  RemoteFeedLoader.swift
 //  EssentialFeed
 //
-//  Created by IrisDarka on 07/08/22.
+//  Created by IrisGal on 07/08/22.
 //
 
 import Foundation
