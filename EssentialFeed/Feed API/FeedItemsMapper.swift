@@ -2,7 +2,7 @@
 //  FeedItemsMapper.swift
 //  EssentialFeed
 //
-//  Created by IrisDarka on 17/08/22.
+//  Created by IrisGal on 17/08/22.
 //
 
 import Foundation

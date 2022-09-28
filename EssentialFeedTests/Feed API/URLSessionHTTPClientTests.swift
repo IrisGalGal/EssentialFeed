@@ -2,7 +2,7 @@
 //  URLSessionHTTPClientTests.swift
 //  EssentialFeedTests
 //
-//  Created by IrisDarka on 26/08/22.
+//  Created by IrisGal on 26/08/22.
 //
 
 import Foundation

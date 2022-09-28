@@ -2,7 +2,7 @@
 //  HTTPClient.swift
 //  EssentialFeed
 //
-//  Created by IrisDarka on 16/08/22.
+//  Created by IrisGal on 16/08/22.
 //
 
 import Foundation
