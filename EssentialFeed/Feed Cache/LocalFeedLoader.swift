@@ -2,14 +2,14 @@
 //  LocalFeedLoader.swift
 //  EssentialFeed
 //
-//  Created by IrisDarka on 29/09/22.
+//  Created by IrisGal on 29/09/22.
 //
 
 import Foundation
 public final class LocalFeedLoader{
     private let store : FeedStore
     private let currentDate: () -> Date
-    init(store: FeedStore,currentDate: @escaping () -> Date) {
+    public init(store: FeedStore,currentDate: @escaping () -> Date) {
         self.store = store
         self.currentDate = currentDate
     }
@@ -31,10 +31,4 @@ public final class LocalFeedLoader{
         }
     }
 }
-public protocol FeedStore{
-    typealias DeletionCompletion = (Error?) -> Void
-    typealias InsertionCompletion = (Error?) -> Void
 
-    func deleteCachedFeed(completion: @escaping DeletionCompletion)
-    func insert(_ items: [FeedItem], timestamp: Date, completion: @escaping InsertionCompletion)
-}
