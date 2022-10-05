@@ -2,7 +2,7 @@
 //  LocalFeedItem.swift
 //  EssentialFeed
 //
-//  Created by IrisDarka on 29/09/22.
+//  Created by IrisGal on 29/09/22.
 //
 
 import Foundation

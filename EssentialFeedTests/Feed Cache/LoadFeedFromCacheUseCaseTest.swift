@@ -2,7 +2,7 @@
 //  LoadFeedFromCacheUseCaseTest.swift
 //  EssentialFeedTests
 //
-//  Created by IrisDarka on 03/10/22.
+//  Created by IrisGal on 03/10/22.
 //
 
 import XCTest
