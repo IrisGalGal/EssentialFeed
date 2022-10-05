@@ -2,7 +2,7 @@
 //  SharedTestHelpers.swift
 //  EssentialFeedTests
 //
-//  Created by IrisDarka on 05/10/22.
+//  Created by IrisGal on 05/10/22.
 //
 
 import Foundation
