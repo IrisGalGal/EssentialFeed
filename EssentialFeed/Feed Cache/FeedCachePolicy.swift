@@ -2,7 +2,7 @@
 //  FeedCachePolicy.swift
 //  EssentialFeed
 //
-//  Created by IrisDarka on 06/10/22.
+//  Created by IrisGal on 06/10/22.
 //
 
 import Foundation
