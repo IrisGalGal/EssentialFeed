@@ -157,13 +157,21 @@
 				2736E95A28EB39A2007A5AC8 /* LoadFeedFromCacheUseCaseTest.swift */,
 				2723699828EDFF2C00BFB1A3 /* ValidateFeedCacheUseCaseTests.swift */,
 				27A7C04828F48B02004EF112 /* CodableFeedStoreTests.swift */,
+				27AAB1D828FDF14F00FA9B76 /* FeedStoreSpecs */,
+			);
+			path = "Feed Cache";
+			sourceTree = "<group>";
+		};
+		27AAB1D828FDF14F00FA9B76 /* FeedStoreSpecs */ = {
+			isa = PBXGroup;
+			children = (
 				27AAB1CE28FDE66E00FA9B76 /* FeedStoreSpecs.swift */,
 				27AAB1D028FDE74E00FA9B76 /* XCTestCase+FeedStoreSpecs.swift */,
 				27AAB1D228FDECE200FA9B76 /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift */,
 				27AAB1D428FDEE8200FA9B76 /* XCTestCase+FialableInsertFeedStoreSpecs.swift */,
 				27AAB1D628FDF06E00FA9B76 /* XCTestCase+FailableDeleteFeedStoreSpecs .swift */,
 			);
-			path = "Feed Cache";
+			path = FeedStoreSpecs;
 			sourceTree = "<group>";
 		};
 		27CF1642289445B5000FBE69 = {
