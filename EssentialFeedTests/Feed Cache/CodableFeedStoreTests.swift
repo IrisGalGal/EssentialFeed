@@ -4,12 +4,10 @@
 //
 //  Created by IrisGal on 10/10/22.
 //
-
-import Foundation
 import XCTest
 import EssentialFeed
 
-class CodableFeedStoreTests: XCTestCase{
+class CodableFeedStoreTests: XCTestCase, FailableFeedStore{
     
     override func setUp() {
         super.tearDown()
