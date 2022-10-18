@@ -2,7 +2,7 @@
 //  XCTestCase+FailableRetrieveFeedStoreSpecs.swift
 //  EssentialFeedTests
 //
-//  Created by IrisDarka on 17/10/22.
+//  Created by IrisGal on 17/10/22.
 //
 import XCTest
 import EssentialFeed
