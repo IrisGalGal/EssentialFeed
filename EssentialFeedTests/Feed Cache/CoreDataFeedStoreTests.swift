@@ -21,7 +21,7 @@ class CoreDataFeedStoreTests: XCTestCase, FeedStoreSpecs {
     }
     
     func test_retrieve_deliversFoundValuesOnNonEmptyCache() {
-            
+
     }
     
     func test_retrieve_hasNoSideEffectsOnNonEmptyCache() {
@@ -61,7 +61,8 @@ class CoreDataFeedStoreTests: XCTestCase, FeedStoreSpecs {
     }
     
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> FeedStore{
-        let sut = CoreFataFeedStore()
+        let storeBundle = Bundle(for: CoreFataFeedStore.self)
+        let sut = try! CoreDataFeedStore(bundle: storeBundle)
         trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }
