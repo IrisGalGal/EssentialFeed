@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import AppKit
 
 public protocol FeedLoader{
     typealias LoadFeedResult = Swift.Result<[FeedImage], Error>
