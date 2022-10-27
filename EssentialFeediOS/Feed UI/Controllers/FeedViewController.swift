@@ -8,19 +8,6 @@
 import UIKit
 import EssentialFeed
 
-public final class FeedUIComposer{
-    public static func feedComposedWith(loader: FeedLoader, imageLoader: FeedImageDataLoader) -> FeedViewController{
-        let refreshController = FeedRefreshViewController(feedLoader: loader)
-        let feedController = FeedViewController(refreshController: refreshController)
-        refreshController.onRefresh = {[weak feedController] feed in
-            feedController?.tableModel = feed.map { model in
-                FeedImageCellController(model: model, imageLoader: imageLoader)
-            }
-        }
-        return feedController
-    }
-}
-
  public final class FeedViewController: UITableViewController, UITableViewDataSourcePrefetching{
     private var refreshController : FeedRefreshViewController?
     var tableModel = [FeedImageCellController]() {
