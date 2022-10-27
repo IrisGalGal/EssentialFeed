@@ -6,7 +6,7 @@
 //
 
 import UIKit
-private extension UIButton {
+extension UIButton {
      func simulateTap() {
          allTargets.forEach { target in
              actions(forTarget: target, forControlEvent: .touchUpInside)?.forEach {
