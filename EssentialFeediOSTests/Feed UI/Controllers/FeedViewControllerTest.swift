@@ -238,7 +238,7 @@ final class FeedViewControllerTest: XCTestCase {
         
     private func makeSUT(currentDate: @escaping () -> Date = Date.init, file: StaticString = #file, line:UInt = #line) -> (sut: FeedViewController, loader: LoaderSpy){
         let loader = LoaderSpy()
-        let sut = FeedViewController(loader: loader, imageLoader: loader)
+        let sut = FeedViewController()
         trackForMemoryLeaks(sut, file: file, line: line)
         trackForMemoryLeaks(loader, file: file, line: line)
         return (sut,loader)
@@ -247,7 +247,7 @@ final class FeedViewControllerTest: XCTestCase {
     private func makeImage(description: String? = nil, location: String? = nil, url: URL = URL(string: "http://any-url.com")!) -> FeedImage {
         return FeedImage(id: UUID(), description: description, location: location, url: url)
     }
-    private struct TaskSpy: FeedImageDataLoaderTask {
+    struct TaskSpy: FeedImageDataLoaderTask {
         let cancelCallback: () -> Void
         func cancel() {
             cancelCallback()
