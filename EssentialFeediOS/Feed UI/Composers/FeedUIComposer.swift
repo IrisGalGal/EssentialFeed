@@ -11,7 +11,6 @@ import EssentialFeed
 public final class FeedUIComposer{
     public static func feedComposedWith(loader: FeedLoader, imageLoader: FeedImageDataLoader) -> FeedViewController{
         let presenter = FeedPresenter(feedLoader: loader)
-        let feedViewModel = FeedViewModel(feedLoader: loader)
         let refreshController = FeedRefreshViewController(presenter: presenter)
         let feedController = FeedViewController(refreshController: refreshController)
         presenter.loadingView = WeakRefVirtualProxy(refreshController)
