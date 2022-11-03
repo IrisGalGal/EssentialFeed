@@ -52,6 +52,8 @@
 		27AAB1D528FDEE8200FA9B76 /* XCTestCase+FialableInsertFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AAB1D428FDEE8200FA9B76 /* XCTestCase+FialableInsertFeedStoreSpecs.swift */; };
 		27AAB1D728FDF06E00FA9B76 /* XCTestCase+FailableDeleteFeedStoreSpecs .swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AAB1D628FDF06E00FA9B76 /* XCTestCase+FailableDeleteFeedStoreSpecs .swift */; };
 		27B2FEA92898D2A200728C8E /* LoadFeedFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2FEA82898D2A100728C8E /* LoadFeedFromRemoteUseCaseTests.swift */; };
+		27B5B2782914442B00BD78E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B5B2762914442B00BD78E3 /* Main.storyboard */; };
+		27B5B27A2914446500BD78E3 /* Feed.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B5B2792914446500BD78E3 /* Feed.xcassets */; };
 		27CF1655289445B5000FBE69 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CF164C289445B5000FBE69 /* EssentialFeed.framework */; };
 		27CF165A289445B5000FBE69 /* EssentialFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF1659289445B5000FBE69 /* EssentialFeedTests.swift */; };
 		27CF165B289445B5000FBE69 /* EssentialFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 27CF164F289445B5000FBE69 /* EssentialFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -166,6 +168,8 @@
 		27AAB1D428FDEE8200FA9B76 /* XCTestCase+FialableInsertFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FialableInsertFeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		27AAB1D628FDF06E00FA9B76 /* XCTestCase+FailableDeleteFeedStoreSpecs .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FailableDeleteFeedStoreSpecs .swift"; sourceTree = "<group>"; };
 		27B2FEA82898D2A100728C8E /* LoadFeedFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
+		27B5B2772914442B00BD78E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Prototype/Prototype/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		27B5B2792914446500BD78E3 /* Feed.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Feed.xcassets; sourceTree = "<group>"; };
 		27CF164C289445B5000FBE69 /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CF164F289445B5000FBE69 /* EssentialFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EssentialFeed.h; sourceTree = "<group>"; };
 		27CF1654289445B5000FBE69 /* EssentialFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -341,6 +345,8 @@
 			children = (
 				270E33D42909AAD000ACA209 /* FeedImageCell.swift */,
 				270E33D62909F12B00ACA209 /* UIView+Shimmering.swift */,
+				27B5B2762914442B00BD78E3 /* Main.storyboard */,
+				27B5B2792914446500BD78E3 /* Feed.xcassets */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -718,6 +724,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27B5B2782914442B00BD78E3 /* Main.storyboard in Resources */,
+				27B5B27A2914446500BD78E3 /* Feed.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -888,6 +896,17 @@
 			targetProxy = 27DAA89328CC5A4500BE8479 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		27B5B2762914442B00BD78E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27B5B2772914442B00BD78E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		270E33C32908755400ACA209 /* Debug */ = {
