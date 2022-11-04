@@ -77,6 +77,9 @@
                                                             <buttonConfiguration key="configuration" style="plain" title="↻">
                                                                 <fontDescription key="titleFontDescription" type="system" pointSize="60"/>
                                                             </buttonConfiguration>
+                                                            <connections>
+                                                                <action selector="retryButtonTapped" destination="jYo-o4-mh2" eventType="touchUpInside" id="PG5-Qh-77D"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
@@ -121,6 +124,7 @@
                                 <connections>
                                     <outlet property="descriptionLabel" destination="Jhl-jH-ahr" id="Ks6-Xe-1aD"/>
                                     <outlet property="feedImageContainer" destination="vZU-3O-rCr" id="SP4-ai-vdY"/>
+                                    <outlet property="feedImageRetryButton" destination="LRx-V0-Aof" id="OYy-cP-r9U"/>
                                     <outlet property="feedImageView" destination="II9-2b-uny" id="VIW-Lz-UEc"/>
                                     <outlet property="locationContainer" destination="JPU-Oj-NwT" id="jiw-3Q-cz5"/>
                                     <outlet property="locationLabel" destination="ThU-Xb-BTV" id="81g-uO-Mux"/>
