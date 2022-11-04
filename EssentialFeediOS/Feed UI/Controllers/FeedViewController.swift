@@ -19,7 +19,6 @@ protocol FeedViewControllerDelegate{
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        title = FeedPresenter.title
         refresh()
     }
     @IBAction private func refresh(){
