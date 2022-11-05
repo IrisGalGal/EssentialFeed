@@ -60,6 +60,7 @@
 		27B5B27A2914446500BD78E3 /* Feed.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B5B2792914446500BD78E3 /* Feed.xcassets */; };
 		27B5B27C291485FB00BD78E3 /* FeedImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5B27B291485FB00BD78E3 /* FeedImagePresenter.swift */; };
 		27C07FF4291722520017B848 /* MainqueueDisptachDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C07FF3291722520017B848 /* MainqueueDisptachDecorator.swift */; };
+		27C07FF6291723450017B848 /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C07FF5291723450017B848 /* WeakRefVirtualProxy.swift */; };
 		27CF1655289445B5000FBE69 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CF164C289445B5000FBE69 /* EssentialFeed.framework */; };
 		27CF165A289445B5000FBE69 /* EssentialFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF1659289445B5000FBE69 /* EssentialFeedTests.swift */; };
 		27CF165B289445B5000FBE69 /* EssentialFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 27CF164F289445B5000FBE69 /* EssentialFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -185,6 +186,7 @@
 		27B5B2792914446500BD78E3 /* Feed.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Feed.xcassets; sourceTree = "<group>"; };
 		27B5B27B291485FB00BD78E3 /* FeedImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImagePresenter.swift; sourceTree = "<group>"; };
 		27C07FF3291722520017B848 /* MainqueueDisptachDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainqueueDisptachDecorator.swift; sourceTree = "<group>"; };
+		27C07FF5291723450017B848 /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirtualProxy.swift; sourceTree = "<group>"; };
 		27CF164C289445B5000FBE69 /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CF164F289445B5000FBE69 /* EssentialFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EssentialFeed.h; sourceTree = "<group>"; };
 		27CF1654289445B5000FBE69 /* EssentialFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -417,6 +419,7 @@
 			children = (
 				274FE05F290B292A00CB3DA2 /* FeedUIComposer.swift */,
 				27C07FF3291722520017B848 /* MainqueueDisptachDecorator.swift */,
+				27C07FF5291723450017B848 /* WeakRefVirtualProxy.swift */,
 			);
 			path = Composers;
 			sourceTree = "<group>";
@@ -807,6 +810,7 @@
 				27D260672912EF880071466D /* FeedImageViewModel.swift in Sources */,
 				274FE05E290B04F700CB3DA2 /* FeedImageCellController.swift in Sources */,
 				27B5B27C291485FB00BD78E3 /* FeedImagePresenter.swift in Sources */,
+				27C07FF6291723450017B848 /* WeakRefVirtualProxy.swift in Sources */,
 				274FE060290B292A00CB3DA2 /* FeedUIComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
