@@ -29,21 +29,23 @@ private extension FeedViewController{
         return feedController
     }
 }
-private final class MainqueueDisptachDecorator: FeedLoader{
-    private let decorator: FeedLoader
+private final class MainqueueDisptachDecorator<T>{
+    private let decorator: T
     
-    init(decorator: FeedLoader) {
+    init(decorator: T) {
         self.decorator = decorator
     }
+    func dispatch(completion: @escaping () -> Void){
+        guard Thread.isMainThread else {
+            return DispatchQueue.main.async(execute: completion)
+        }
+        completion()
+    }
+}
+extension MainqueueDisptachDecorator: FeedLoader where T == FeedLoader{
     func load(completion: @escaping (LoadFeedResult) -> Void) {
-        decorator.load { result in
-            if Thread.isMainThread{
-                completion(result)
-            }else{
-                DispatchQueue.main.async {
-                    completion(result)
-                }
-            }
+        decorator.load { [weak self] result in
+            self?.dispatch { completion(result) }
         }
     }
 }
