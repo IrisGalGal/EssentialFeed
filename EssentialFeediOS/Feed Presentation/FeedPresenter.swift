@@ -4,8 +4,9 @@
 //
 //  Created by IrisDarka on 02/11/22.
 //
-
+import Foundation
 import EssentialFeed
+
 struct FeedLoadingViewModel{
     let isLoading: Bool
 }
@@ -28,7 +29,7 @@ final class FeedPresenter{
         self.loadingView = loadingView
     }
     static var title: String{
-        return "My Feed"
+        return NSLocalizedString("FEED_VIEW_TITLE", tableName: "Feed", bundle: Bundle(for: FeedPresenter.self), comment: "Title for the feed view")
     }
     
     func didStartLoadingFeed(){
