@@ -54,6 +54,7 @@
 		27B075D32915780600E4743C /* UIImageView+Animatios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B075D22915780600E4743C /* UIImageView+Animatios.swift */; };
 		27B075D72915E32200E4743C /* FeedViewControllerTests+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B075D62915E32200E4743C /* FeedViewControllerTests+Localization.swift */; };
 		27B075D82915E53A00E4743C /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27B075DA2915E53A00E4743C /* Feed.strings */; };
+		27B075DD2915E63B00E4743C /* FeedLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B075DC2915E63B00E4743C /* FeedLocalizationTests.swift */; };
 		27B2FEA92898D2A200728C8E /* LoadFeedFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2FEA82898D2A100728C8E /* LoadFeedFromRemoteUseCaseTests.swift */; };
 		27B5B2782914442B00BD78E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B5B2762914442B00BD78E3 /* Main.storyboard */; };
 		27B5B27A2914446500BD78E3 /* Feed.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B5B2792914446500BD78E3 /* Feed.xcassets */; };
@@ -175,6 +176,9 @@
 		27B075D62915E32200E4743C /* FeedViewControllerTests+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControllerTests+Localization.swift"; sourceTree = "<group>"; };
 		27B075D92915E53A00E4743C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
 		27B075DB2915E56600E4743C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Feed.strings"; sourceTree = "<group>"; };
+		27B075DC2915E63B00E4743C /* FeedLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLocalizationTests.swift; sourceTree = "<group>"; };
+		27B075DE2915E77800E4743C /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Feed.strings; sourceTree = "<group>"; };
+		27B075DF2915E81C00E4743C /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Feed.strings"; sourceTree = "<group>"; };
 		27B2FEA82898D2A100728C8E /* LoadFeedFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
 		27B5B2772914442B00BD78E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Prototype/Prototype/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		27B5B2792914446500BD78E3 /* Feed.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Feed.xcassets; sourceTree = "<group>"; };
@@ -385,6 +389,7 @@
 			isa = PBXGroup;
 			children = (
 				270E33C82908A25800ACA209 /* FeedUIIntegrationTest.swift */,
+				27B075DC2915E63B00E4743C /* FeedLocalizationTests.swift */,
 				274FE047290AF29D00CB3DA2 /* Helpers */,
 			);
 			path = Controllers;
@@ -717,6 +722,8 @@
 				en,
 				Base,
 				"pt-BR",
+				el,
+				"es-419",
 			);
 			mainGroup = 27CF1642289445B5000FBE69;
 			productRefGroup = 27CF164D289445B5000FBE69 /* Products */;
@@ -806,6 +813,7 @@
 			files = (
 				274FE056290AFE3600CB3DA2 /* FeedImageCell+TestHelpers.swift in Sources */,
 				270E33C92908A25800ACA209 /* FeedUIIntegrationTest.swift in Sources */,
+				27B075DD2915E63B00E4743C /* FeedLocalizationTests.swift in Sources */,
 				274FE058290AFEE300CB3DA2 /* FeedViewControllerTest+LoaderSpy.swift in Sources */,
 				274FE049290AF37F00CB3DA2 /* UIControl+TestHelpers.swift in Sources */,
 				274FE05C290B002D00CB3DA2 /* FeedCiewControllerTests+Assertions.swift in Sources */,
@@ -921,6 +929,8 @@
 			children = (
 				27B075D92915E53A00E4743C /* en */,
 				27B075DB2915E56600E4743C /* pt-BR */,
+				27B075DE2915E77800E4743C /* el */,
+				27B075DF2915E81C00E4743C /* es-419 */,
 			);
 			name = Feed.strings;
 			sourceTree = "<group>";
@@ -1119,6 +1129,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1177,6 +1188,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
