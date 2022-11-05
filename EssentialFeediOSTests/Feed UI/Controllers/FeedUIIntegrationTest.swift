@@ -268,7 +268,7 @@ class FeedUIIntegrationTest: XCTestCase {
         let (sut, loader) = makeSUT()
         
         sut.loadViewIfNeeded()
-        loader.completeFeedLoading(with: makeImage())
+        loader.completeFeedLoading(with: [makeImage()])
         _ = sut.simulateFeedImageViewVisible(at: 0)
         
         let exp = expectation(description: "Wait for background queue work")
