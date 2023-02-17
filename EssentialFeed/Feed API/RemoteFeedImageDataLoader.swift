@@ -7,8 +7,7 @@
 
 import Foundation
 
-class RemoteFeedImageDataLoader{
-    
+public class RemoteFeedImageDataLoader: FeedImageDataLoader{
     private let client: HTTPClient
     
     init(client: HTTPClient){
@@ -44,7 +43,7 @@ class RemoteFeedImageDataLoader{
     }
     
     @discardableResult
-    func loadImageData(from url: URL, completion: @escaping (FeedImageDataLoader.Result) -> Void) -> FeedImageDataLoaderTask {
+    public func loadImageData(from url: URL, completion: @escaping (FeedImageDataLoader.Result) -> Void) -> FeedImageDataLoaderTask {
         var task = HTTPClientTaskWrapper(completion)
         task.wrapped = client.get(from: url) { [weak self] result in
             guard self != nil else { return }
