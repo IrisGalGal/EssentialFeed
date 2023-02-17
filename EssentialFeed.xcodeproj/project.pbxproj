@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2703D64929A023A900D63B6F /* HTTPURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2703D64629A0230F00D63B6F /* HTTPURLResponse.swift */; };
+		2703D64B29A0255700D63B6F /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2703D64A29A0255700D63B6F /* URLProtocolStub.swift */; };
 		270E33BB2908755400ACA209 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270E33B32908755300ACA209 /* EssentialFeediOS.framework */; };
 		270E33C92908A25800ACA209 /* FeedUIIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270E33C82908A25800ACA209 /* FeedUIIntegrationTest.swift */; };
 		270E33CB2908A56600ACA209 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CF164C289445B5000FBE69 /* EssentialFeed.framework */; platformFilter = ios; };
@@ -144,6 +145,7 @@
 
 /* Begin PBXFileReference section */
 		2703D64629A0230F00D63B6F /* HTTPURLResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPURLResponse.swift; sourceTree = "<group>"; };
+		2703D64A29A0255700D63B6F /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
 		270E33B32908755300ACA209 /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		270E33BA2908755400ACA209 /* EssentialFeediOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeediOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		270E33C82908A25800ACA209 /* FeedUIIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIIntegrationTest.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				2703D64629A0230F00D63B6F /* HTTPURLResponse.swift */,
+				2703D64A29A0255700D63B6F /* URLProtocolStub.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -903,6 +906,7 @@
 				2743E76B29008B7800D41896 /* ManagedCache.swift in Sources */,
 				27DAA88928CC546E00BE8479 /* URLSessionHTTPClient.swift in Sources */,
 				2743E76D29008BA700D41896 /* ManagedFeedImage.swift in Sources */,
+				2703D64B29A0255700D63B6F /* URLProtocolStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
