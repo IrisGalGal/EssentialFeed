@@ -2,7 +2,7 @@
 //  UITableView+Dequeueing.swift
 //  EssentialFeediOS
 //
-//  Created by IrisDarka on 04/11/22.
+//  Created by IrisGal on 04/11/22.
 //
 
 import UIKit

@@ -2,7 +2,7 @@
 //  UIView+Shimmering.swift
 //  EssentialFeediOS
 //
-//  Created by IrisDarka on 26/10/22.
+//  Created by IrisGal on 26/10/22.
 //
 
 import UIKit

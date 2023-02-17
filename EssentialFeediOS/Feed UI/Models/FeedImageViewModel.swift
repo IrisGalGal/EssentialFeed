@@ -2,7 +2,7 @@
 //  FeedImageViewModel.swift
 //  EssentialFeediOS
 //
-//  Created by IrisDarka on 02/11/22.
+//  Created by IrisGal on 02/11/22.
 //
 
 import Foundation

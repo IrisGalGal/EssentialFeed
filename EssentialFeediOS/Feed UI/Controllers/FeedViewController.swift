@@ -2,7 +2,7 @@
 //  FeedViewController.swift
 //  EssentialFeediOS
 //
-//  Created by IrisDarka on 25/10/22.
+//  Created by IrisGal on 25/10/22.
 //
 
 import UIKit
