@@ -33,11 +33,14 @@ class RemoteFeedImageDataLoaderTest: XCTestCase{
         XCTAssertEqual(client.requestedURLs, [url, url])
     }
     
-    func test_loadImageDataFromURL_deliversErrorOnClientError(){
-        let url = URL(string: "https://a-given-url.com")!
-        
-        let (sut, client) = makeSUT(url: url)
+    func test_loadImageDataFromURL_deliversConnectivityErrorOnClientError(){
+
+        let (sut, client) = makeSUT()
         let clientError = NSError(domain: "a client error", code: 0)
+        
+        expect(sut, toCompleteWith: .failure(.connectivity)) {
+            client.complete(with: clientError)
+        }
         
     }
     
@@ -70,17 +73,6 @@ class RemoteFeedImageDataLoaderTest: XCTestCase{
         }
     }
     
-    func test_loadImageDataFromURL_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated(){
-        let client = HTTPClientSpy()
-        var sut: RemoteFeedImageDataLoader? = RemoteFeedImageDataLoader(client: client)
-        
-        var capturedResults = [FeedImageDataLoader.Result]()
-        sut?.loadImageData(from: anyURL(), completion: { capturedResults.append($0)})
-        
-        sut = nil
-        client.complete(withStatusCode: 200, data: anyData())
-        XCTAssertTrue(capturedResults.isEmpty)
-    }
     
     func test_cancelLoadImageDataURLTask_cancelClientURLRequest(){
         let (sut,client) = makeSUT()
@@ -108,6 +100,18 @@ class RemoteFeedImageDataLoaderTest: XCTestCase{
         XCTAssertTrue(received.isEmpty, "Expected no received results after cancelling task")
     }
     
+    func test_loadImageDataFromURL_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated() {
+        let client = HTTPClientSpy()
+        var sut: RemoteFeedImageDataLoader? = RemoteFeedImageDataLoader(client: client)
+        
+        var capturedResults = [FeedImageDataLoader.Result]()
+        sut?.loadImageData(from: anyURL()) { capturedResults.append($0) }
+        
+        sut = nil
+        client.complete(withStatusCode: 200, data: anyData())
+        
+        XCTAssertTrue(capturedResults.isEmpty)
+    }
     private func makeSUT(url: URL = anyURL(), file: StaticString = #file, line: UInt = #line) -> (sut: RemoteFeedImageDataLoader, client: HTTPClientSpy){
         let client = HTTPClientSpy()
         let sut = RemoteFeedImageDataLoader(client: client)
