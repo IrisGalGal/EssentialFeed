@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2703D64929A023A900D63B6F /* HTTPURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2703D64629A0230F00D63B6F /* HTTPURLResponse.swift */; };
 		270E33BB2908755400ACA209 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270E33B32908755300ACA209 /* EssentialFeediOS.framework */; };
 		270E33C92908A25800ACA209 /* FeedUIIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270E33C82908A25800ACA209 /* FeedUIIntegrationTest.swift */; };
 		270E33CB2908A56600ACA209 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CF164C289445B5000FBE69 /* EssentialFeed.framework */; platformFilter = ios; };
@@ -142,6 +143,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2703D64629A0230F00D63B6F /* HTTPURLResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPURLResponse.swift; sourceTree = "<group>"; };
 		270E33B32908755300ACA209 /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		270E33BA2908755400ACA209 /* EssentialFeediOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeediOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		270E33C82908A25800ACA209 /* FeedUIIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIIntegrationTest.swift; sourceTree = "<group>"; };
@@ -273,6 +275,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2703D64829A0238B00D63B6F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2703D64629A0230F00D63B6F /* HTTPURLResponse.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		270E33B42908755300ACA209 /* EssentialFeediOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -574,6 +584,7 @@
 				27E0C1FD28E621DE0037666F /* RemoteFeedItem.swift */,
 				27D9235C299DAFE300BA5C31 /* RemoteFeedImageDataLoader.swift */,
 				27DAA88828CC546E00BE8479 /* URLSessionHTTPClient.swift */,
+				2703D64829A0238B00D63B6F /* Helpers */,
 			);
 			path = "Feed API";
 			sourceTree = "<group>";
@@ -883,6 +894,7 @@
 				27E0C1FA28E613F00037666F /* FeedStore.swift in Sources */,
 				2743E7662900473300D41896 /* CoreDataFeedStore.swift in Sources */,
 				27D9235B299DADE400BA5C31 /* FeedImageDataLoader.swift in Sources */,
+				2703D64929A023A900D63B6F /* HTTPURLResponse.swift in Sources */,
 				27E0C1FC28E621B20037666F /* LocalFeedImage.swift in Sources */,
 				27E0C1F828E613520037666F /* LocalFeedLoader.swift in Sources */,
 				27E0C1FE28E621DE0037666F /* RemoteFeedItem.swift in Sources */,
