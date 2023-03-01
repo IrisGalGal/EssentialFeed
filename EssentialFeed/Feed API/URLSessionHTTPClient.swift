@@ -30,7 +30,7 @@ public final class URLSessionHTTPClient: HTTPClient{
                 completion(Result {
                     if let error = error {
                         throw error
-                    } else if let data = data, let response = response as? url {
+                    } else if let data = data, let response = response as? HTTPURLResponse {
                         return (data, response)
                     } else {
                         throw UnexpectedValuesRepresentation()
