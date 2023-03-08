@@ -40,6 +40,7 @@ final class FeedImageCellController: FeedImageView{
         cell?.feedImageContainer.isShimmering = viewModel.isLoading
         cell?.feedImageRetryButton.isHidden = !viewModel.shouldRetry
         cell?.onRetry = delegate.didRequestImage
+        cell?.onReuse = delegate.didCancelImageRequest
     }
     private func releaseCellForReuse(){
         cell = nil
