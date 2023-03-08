@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import EssentialFeediOS
 import EssentialFeed
+import EssentialFeediOS
 
 extension FeedUIIntegrationTest{
     class LoaderSpy: FeedLoader, FeedImageDataLoader{
@@ -29,6 +29,13 @@ extension FeedUIIntegrationTest{
         func completeFeedLoadingWithError(at index: Int = 0){
             let error = NSError(domain: "an error", code: 0)
             feedRequests[index](.failure(error))
+        }
+        
+        private struct TaskSpy: FeedImageDataLoaderTask {
+            let cancelCallback: () -> Void
+            func cancel() {
+                cancelCallback()
+            }
         }
         
         // MARK: - FeedImageDataLoader

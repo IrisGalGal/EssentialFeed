@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y3x-ny-6vY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wyf-3e-x4o">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -11,7 +11,7 @@
         <!--Feed View Controller-->
         <scene sceneID="gDp-V2-d1M">
             <objects>
-                <tableViewController id="wyf-3e-x4o" customClass="FeedViewController" customModule="Prototype" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="wyf-3e-x4o" customClass="FeedViewController" customModule="EssentialFeediOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Vlb-kc-hsU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="578" id="jYo-o4-mh2" customClass="FeedImageCell" customModule="Prototype" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="578" id="jYo-o4-mh2" customClass="FeedImageCell" customModule="EssentialFeediOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="414" height="578"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jYo-o4-mh2" id="kYN-2S-ej7">
@@ -71,14 +71,27 @@
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="II9-2b-uny" userLabel="Image Container">
                                                             <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
                                                         </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfc-Cc-JUp">
+                                                            <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise" catalog="system"/>
+                                                            <connections>
+                                                                <action selector="retryButtonTapped" destination="jYo-o4-mh2" eventType="touchUpInside" id="1eo-97-XhA"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="Qfc-Cc-JUp" secondAttribute="bottom" id="22a-OG-CiK"/>
                                                         <constraint firstAttribute="trailing" secondItem="II9-2b-uny" secondAttribute="trailing" id="7Uo-zF-bkT"/>
                                                         <constraint firstAttribute="width" secondItem="vZU-3O-rCr" secondAttribute="height" multiplier="1:1" id="Se4-GW-VPG"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Qfc-Cc-JUp" secondAttribute="trailing" id="fnq-KF-fbV"/>
                                                         <constraint firstItem="II9-2b-uny" firstAttribute="leading" secondItem="vZU-3O-rCr" secondAttribute="leading" id="joU-d9-pIc"/>
+                                                        <constraint firstItem="Qfc-Cc-JUp" firstAttribute="top" secondItem="vZU-3O-rCr" secondAttribute="top" id="oX7-KA-oKG"/>
                                                         <constraint firstAttribute="bottom" secondItem="II9-2b-uny" secondAttribute="bottom" id="qGb-qX-aQo"/>
                                                         <constraint firstItem="II9-2b-uny" firstAttribute="top" secondItem="vZU-3O-rCr" secondAttribute="top" id="u7b-6L-7m4"/>
+                                                        <constraint firstItem="Qfc-Cc-JUp" firstAttribute="leading" secondItem="vZU-3O-rCr" secondAttribute="leading" id="wFu-QG-tIX"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -110,6 +123,7 @@
                                 <connections>
                                     <outlet property="descriptionLabel" destination="Jhl-jH-ahr" id="Ks6-Xe-1aD"/>
                                     <outlet property="feedImageContainer" destination="vZU-3O-rCr" id="SP4-ai-vdY"/>
+                                    <outlet property="feedImageRetryButton" destination="Qfc-Cc-JUp" id="7B1-UV-ehe"/>
                                     <outlet property="feedImageView" destination="II9-2b-uny" id="VIW-Lz-UEc"/>
                                     <outlet property="locationContainer" destination="JPU-Oj-NwT" id="jiw-3Q-cz5"/>
                                     <outlet property="locationLabel" destination="ThU-Xb-BTV" id="81g-uO-Mux"/>
@@ -122,7 +136,6 @@
                             <outlet property="prefetchDataSource" destination="wyf-3e-x4o" id="ZgM-7W-axT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="d4G-Rj-vrc"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="7z5-w8-SjQ">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -133,28 +146,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qZT-AK-G5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1965" y="45"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="aYa-QN-2s6">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y3x-ny-6vY" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="azV-I0-ztJ">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="wyf-3e-x4o" kind="relationship" relationship="rootViewController" id="aQa-x2-zaU"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M1I-bZ-3Qg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1094" y="52"/>
+            <point key="canvasLocation" x="1090" y="-33"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
         <image name="pin" width="10" height="14"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

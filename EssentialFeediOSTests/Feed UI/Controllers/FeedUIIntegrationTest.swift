@@ -293,11 +293,4 @@ class FeedUIIntegrationTest: XCTestCase {
     private func anyImageData() -> Data{
         return UIImage.make(withColor: .red).pngData()!
     }
-    
-    struct TaskSpy: FeedImageDataLoaderTask {
-        let cancelCallback: () -> Void
-        func cancel() {
-            cancelCallback()
-        }
-    }
 }

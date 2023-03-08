@@ -41,7 +41,6 @@
 		274FE044290AF22100CB3DA2 /* UIRefreshControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274FE043290AF22100CB3DA2 /* UIRefreshControl+TestHelpers.swift */; };
 		274FE046290AF27200CB3DA2 /* UIButton+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274FE045290AF27200CB3DA2 /* UIButton+TestHelpers.swift */; };
 		274FE049290AF37F00CB3DA2 /* UIControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274FE048290AF37F00CB3DA2 /* UIControl+TestHelpers.swift */; };
-		274FE04F290AF65300CB3DA2 /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274FE04E290AF65300CB3DA2 /* FeedImageDataLoader.swift */; };
 		274FE056290AFE3600CB3DA2 /* FeedImageCell+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274FE055290AFE3600CB3DA2 /* FeedImageCell+TestHelpers.swift */; };
 		274FE058290AFEE300CB3DA2 /* FeedViewControllerTest+LoaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274FE057290AFEE300CB3DA2 /* FeedViewControllerTest+LoaderSpy.swift */; };
 		274FE05A290AFFA700CB3DA2 /* FeedViewController+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274FE059290AFFA700CB3DA2 /* FeedViewController+TestHelpers.swift */; };
@@ -66,7 +65,7 @@
 		27B075D82915E53A00E4743C /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27B075DA2915E53A00E4743C /* Feed.strings */; };
 		27B075DD2915E63B00E4743C /* FeedLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B075DC2915E63B00E4743C /* FeedLocalizationTests.swift */; };
 		27B2FEA92898D2A200728C8E /* LoadFeedFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2FEA82898D2A100728C8E /* LoadFeedFromRemoteUseCaseTests.swift */; };
-		27B5B2782914442B00BD78E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B5B2762914442B00BD78E3 /* Main.storyboard */; };
+		27B5B2782914442B00BD78E3 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B5B2762914442B00BD78E3 /* Feed.storyboard */; };
 		27B5B27A2914446500BD78E3 /* Feed.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B5B2792914446500BD78E3 /* Feed.xcassets */; };
 		27B5B27C291485FB00BD78E3 /* FeedImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5B27B291485FB00BD78E3 /* FeedImagePresenter.swift */; };
 		27C07FF4291722520017B848 /* MainqueueDisptachDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C07FF3291722520017B848 /* MainqueueDisptachDecorator.swift */; };
@@ -180,7 +179,6 @@
 		274FE043290AF22100CB3DA2 /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		274FE045290AF27200CB3DA2 /* UIButton+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+TestHelpers.swift"; sourceTree = "<group>"; };
 		274FE048290AF37F00CB3DA2 /* UIControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+TestHelpers.swift"; sourceTree = "<group>"; };
-		274FE04E290AF65300CB3DA2 /* FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoader.swift; sourceTree = "<group>"; };
 		274FE055290AFE3600CB3DA2 /* FeedImageCell+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedImageCell+TestHelpers.swift"; sourceTree = "<group>"; };
 		274FE057290AFEE300CB3DA2 /* FeedViewControllerTest+LoaderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControllerTest+LoaderSpy.swift"; sourceTree = "<group>"; };
 		274FE059290AFFA700CB3DA2 /* FeedViewController+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewController+TestHelpers.swift"; sourceTree = "<group>"; };
@@ -208,7 +206,7 @@
 		27B075DE2915E77800E4743C /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Feed.strings; sourceTree = "<group>"; };
 		27B075DF2915E81C00E4743C /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Feed.strings"; sourceTree = "<group>"; };
 		27B2FEA82898D2A100728C8E /* LoadFeedFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
-		27B5B2772914442B00BD78E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Prototype/Prototype/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		27B5B2772914442B00BD78E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Prototype/Prototype/Base.lproj/Feed.storyboard; sourceTree = SOURCE_ROOT; };
 		27B5B2792914446500BD78E3 /* Feed.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Feed.xcassets; sourceTree = "<group>"; };
 		27B5B27B291485FB00BD78E3 /* FeedImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImagePresenter.swift; sourceTree = "<group>"; };
 		27C07FF3291722520017B848 /* MainqueueDisptachDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainqueueDisptachDecorator.swift; sourceTree = "<group>"; };
@@ -304,7 +302,6 @@
 			isa = PBXGroup;
 			children = (
 				27D260682912F8C50071466D /* Feed Presentation */,
-				274FE04D290AF61A00CB3DA2 /* Feed Image Loader */,
 				274FE04C290AF60F00CB3DA2 /* Feed UI */,
 			);
 			path = EssentialFeediOS;
@@ -404,7 +401,7 @@
 			children = (
 				270E33D42909AAD000ACA209 /* FeedImageCell.swift */,
 				270E33D62909F12B00ACA209 /* UIView+Shimmering.swift */,
-				27B5B2762914442B00BD78E3 /* Main.storyboard */,
+				27B5B2762914442B00BD78E3 /* Feed.storyboard */,
 				27B5B2792914446500BD78E3 /* Feed.xcassets */,
 				27B075D02915779D00E4743C /* UITableView+Dequeueing.swift */,
 				27B075D22915780600E4743C /* UIImageView+Animatios.swift */,
@@ -421,14 +418,6 @@
 				274FE061290B293100CB3DA2 /* Composers */,
 			);
 			path = "Feed UI";
-			sourceTree = "<group>";
-		};
-		274FE04D290AF61A00CB3DA2 /* Feed Image Loader */ = {
-			isa = PBXGroup;
-			children = (
-				274FE04E290AF65300CB3DA2 /* FeedImageDataLoader.swift */,
-			);
-			path = "Feed Image Loader";
 			sourceTree = "<group>";
 		};
 		274FE050290AF69000CB3DA2 /* Controllers */ = {
@@ -815,7 +804,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27B5B2782914442B00BD78E3 /* Main.storyboard in Resources */,
+				27B5B2782914442B00BD78E3 /* Feed.storyboard in Resources */,
 				27B5B27A2914446500BD78E3 /* Feed.xcassets in Resources */,
 				27B075D82915E53A00E4743C /* Feed.strings in Resources */,
 			);
@@ -866,7 +855,6 @@
 				27C07FF82917238D0017B848 /* FeedViewAdapter.swift in Sources */,
 				27C07FF4291722520017B848 /* MainqueueDisptachDecorator.swift in Sources */,
 				27D2606A2912F8E60071466D /* FeedPresenter.swift in Sources */,
-				274FE04F290AF65300CB3DA2 /* FeedImageDataLoader.swift in Sources */,
 				27B075D32915780600E4743C /* UIImageView+Animatios.swift in Sources */,
 				270E33D72909F12B00ACA209 /* UIView+Shimmering.swift in Sources */,
 				27C07FFC291724DA0017B848 /* FeedLoaderPresentationAdapter.swift in Sources */,
@@ -1023,12 +1011,12 @@
 			name = Feed.strings;
 			sourceTree = "<group>";
 		};
-		27B5B2762914442B00BD78E3 /* Main.storyboard */ = {
+		27B5B2762914442B00BD78E3 /* Feed.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				27B5B2772914442B00BD78E3 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Feed.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1100,6 +1088,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1118,6 +1107,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
