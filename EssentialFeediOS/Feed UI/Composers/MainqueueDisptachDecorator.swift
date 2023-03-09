@@ -22,7 +22,7 @@ final class MainqueueDisptachDecorator<T>{
     }
 }
 extension MainqueueDisptachDecorator: FeedLoader where T == FeedLoader{
-    func load(completion: @escaping (LoadFeedResult) -> Void) {
+    func load(completion: @escaping (FeedLoader.Result) -> Void) {
         decorator.load { [weak self] result in
             self?.dispatch { completion(result) }
         }
