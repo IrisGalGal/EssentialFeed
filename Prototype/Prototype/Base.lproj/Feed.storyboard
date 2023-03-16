@@ -77,7 +77,8 @@
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise" catalog="system"/>
                                                             <connections>
-                                                                <action selector="retryButtonTapped" destination="jYo-o4-mh2" eventType="touchUpInside" id="1eo-97-XhA"/>
+                                                                <action selector="refresh" destination="wyf-3e-x4o" eventType="valueChanged" id="lrc-e4-jpe"/>
+                                                                <action selector="retryButtonTapped" destination="jYo-o4-mh2" eventType="touchUpInside" id="bMP-dK-Yiq"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -121,27 +122,24 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="descriptionLabel" destination="Jhl-jH-ahr" id="Ks6-Xe-1aD"/>
-                                    <outlet property="feedImageContainer" destination="vZU-3O-rCr" id="SP4-ai-vdY"/>
-                                    <outlet property="feedImageRetryButton" destination="Qfc-Cc-JUp" id="7B1-UV-ehe"/>
-                                    <outlet property="feedImageView" destination="II9-2b-uny" id="VIW-Lz-UEc"/>
-                                    <outlet property="locationContainer" destination="JPU-Oj-NwT" id="jiw-3Q-cz5"/>
-                                    <outlet property="locationLabel" destination="ThU-Xb-BTV" id="81g-uO-Mux"/>
+                                    <outlet property="descriptionLabel" destination="Jhl-jH-ahr" id="tqO-xI-z05"/>
+                                    <outlet property="feedImageContainer" destination="vZU-3O-rCr" id="00W-Ss-950"/>
+                                    <outlet property="feedImageRetryButton" destination="Qfc-Cc-JUp" id="rCl-Ni-hyb"/>
+                                    <outlet property="feedImageView" destination="II9-2b-uny" id="XzY-9o-rxe"/>
+                                    <outlet property="locationContainer" destination="JPU-Oj-NwT" id="xVP-QR-hNX"/>
+                                    <outlet property="locationLabel" destination="ThU-Xb-BTV" id="tSM-HW-wL1"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="wyf-3e-x4o" id="d2S-OV-hEI"/>
                             <outlet property="delegate" destination="wyf-3e-x4o" id="PZv-58-M67"/>
-                            <outlet property="prefetchDataSource" destination="wyf-3e-x4o" id="ZgM-7W-axT"/>
+                            <outlet property="prefetchDataSource" destination="wyf-3e-x4o" id="MkG-lZ-bcs"/>
                         </connections>
                     </tableView>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="7z5-w8-SjQ">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <connections>
-                            <action selector="refresh" destination="wyf-3e-x4o" eventType="valueChanged" id="bL2-55-P5x"/>
-                        </connections>
                     </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qZT-AK-G5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -16,14 +16,15 @@ protocol FeedViewControllerDelegate{
         didSet { tableView.reloadData() }
     }
 
-    
     public override func viewDidLoad() {
         super.viewDidLoad()
         refresh()
     }
+
     @IBAction private func refresh(){
         delegate?.didRequestFeedRefresh()
     }
+    
     func display(_ viewModel: FeedLoadingViewModel) {
         if viewModel.isLoading{
             refreshControl?.beginRefreshing()
