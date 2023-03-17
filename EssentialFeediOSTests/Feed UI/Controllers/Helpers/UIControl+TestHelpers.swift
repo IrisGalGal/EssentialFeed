@@ -9,6 +9,10 @@ import UIKit
 
 extension UIControl{
     func simulate(event: UIControl.Event){
-        simulate(event: .valueChanged)
+        allTargets.forEach { target in
+            actions(forTarget: target, forControlEvent: event)?.forEach {
+                (target as NSObject).perform(Selector($0))
+            }
+        }
     }
 }

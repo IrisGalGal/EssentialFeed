@@ -26,7 +26,7 @@ final class FeedImagePresenter<View: FeedImageView, Image> where View.Image == I
             location: model.location,
             image: nil,
             isLoading: true,
-            shoucldRetry: false))
+            shouldRetry: false))
     }
     private struct InvalidImageDataError: Error{}
     func didFinishLoadingImageData(with data: Data, for model: FeedImage){
