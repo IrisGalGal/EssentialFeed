@@ -6,21 +6,24 @@
 //
 
 import UIKit
-protocol FeedViewControllerDelegate{
+public protocol FeedViewControllerDelegate{
     func didRequestFeedRefresh()
 }
  public final class FeedViewController: UITableViewController, UITableViewDataSourcePrefetching, FeedLoadingView{
-     var delegate: FeedViewControllerDelegate?
      
-    var tableModel = [FeedImageCellController]() {
+    private var tableModel = [FeedImageCellController]() {
         didSet { tableView.reloadData() }
     }
+    
+    var delegate: FeedViewControllerDelegate?
 
     public override func viewDidLoad() {
         super.viewDidLoad()
         refresh()
     }
-
+    public func display(_ cellControllers: [FeedImageCellController]){
+        tableModel = cellControllers
+    }
     @IBAction private func refresh(){
         delegate?.didRequestFeedRefresh()
     }
