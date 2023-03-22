@@ -34,7 +34,9 @@ class FeedSnapshotTests: XCTestCase {
     }
     func test_feedWithFaileImageLoading(){
         let sut = makeSUT()
+        
         sut.display(feedWithFaileImageLoading())
+        
         record(snapshot: sut.snapshot(), named: "FEED_WITH_FAILED_IMAGE_LOADING")
     }
     // MARK: - Helpers
@@ -45,6 +47,7 @@ class FeedSnapshotTests: XCTestCase {
         controller.loadViewIfNeeded()
         return controller
     }
+    
     private func feedWithFaileImageLoading() -> [ImageStub]{
         return [ ImageStub(description: nil, location: "Cannon Street, London", image: nil), ImageStub (description: nil, location: "Brighton Seafront", image: nil)]
     }
