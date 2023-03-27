@@ -7,6 +7,8 @@
 
 import Foundation
 import EssentialFeed
+import EssentialFeediOS
+import EssentialFeedAPI
 
 class HTTPClientStub: HTTPClient {
     private class Task: HTTPClientTask {
