@@ -5,32 +5,28 @@
 //  Created by IrisDarka on 05/11/22.
 //
 
+import Foundation
 import EssentialFeed
-import UIKit
-import EssentialFeediOS
-final class MainqueueDisptachDecorator<T>{
-    private let decorator: T
+
+final class MainQueueDispatchDecorator<T> {
+    private let decoratee: T
     
-    init(decorator: T) {
-        self.decorator = decorator
+    init(decoratee: T) {
+        self.decoratee = decoratee
     }
-    func dispatch(completion: @escaping () -> Void){
+    
+    func dispatch(completion: @escaping () -> Void) {
         guard Thread.isMainThread else {
             return DispatchQueue.main.async(execute: completion)
         }
+        
         completion()
     }
 }
-extension MainqueueDisptachDecorator: FeedLoader where T == FeedLoader{
-    func load(completion: @escaping (FeedLoader.Result) -> Void) {
-        decorator.load { [weak self] result in
-            self?.dispatch { completion(result) }
-        }
-    }
-}
-extension MainqueueDisptachDecorator: FeedImageDataLoader where T == FeedImageDataLoader{
+
+extension MainQueueDispatchDecorator: FeedImageDataLoader where T == FeedImageDataLoader {
     func loadImageData(from url: URL, completion: @escaping (FeedImageDataLoader.Result) -> Void) -> FeedImageDataLoaderTask {
-        decorator.loadImageData(from: url) { [weak self] result in
+        return decoratee.loadImageData(from: url) { [weak self] result in
             self?.dispatch { completion(result) }
         }
     }
