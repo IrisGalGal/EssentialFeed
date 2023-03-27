@@ -7,6 +7,7 @@
 
 import XCTest
 import EssentialFeed
+import EssentialFeedAPI
 
 class LoadFeedFromRemoteUseCaseTests: XCTestCase {
     
@@ -14,10 +15,12 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
         let (_, client) = makeSUT()
         XCTAssertTrue(client.requestedURLs.isEmpty)
     }
+    
     func test_load_requestsDataFromURL(){
         let (_, client) = makeSUT()
         XCTAssertTrue(client.requestedURLs.isEmpty)
     }
+    
     func test_loadTwice_requestsDataFromURLTwice(){
         let url = URL(string: "https://a-given-url.com")!
         let (sut, client) = makeSUT(url: url)

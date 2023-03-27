@@ -32,7 +32,7 @@ public final class FeedImageCellController: FeedImageView{
         releaseCellForReuse()
         delegate.didCancelImageRequest()
     }
-     func display(_ viewModel: FeedImageViewModel<UIImage>){
+    public func display(_ viewModel: FeedImageViewModel<UIImage>){
         cell?.locationContainer.isHidden = !viewModel.hasLocation
         cell?.locationLabel.text = viewModel.location
         cell?.descriptionLabel.text = viewModel.description

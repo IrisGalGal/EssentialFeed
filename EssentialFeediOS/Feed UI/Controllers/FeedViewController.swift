@@ -18,7 +18,7 @@ public protocol FeedViewControllerDelegate{
         didSet { tableView.reloadData() }
     }
     
-    var delegate: FeedViewControllerDelegate?
+    public var delegate: FeedViewControllerDelegate?
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,14 +32,14 @@ public protocol FeedViewControllerDelegate{
         delegate?.didRequestFeedRefresh()
     }
     
-    func display(_ viewModel: FeedLoadingViewModel) {
+     public func display(_ viewModel: FeedLoadingViewModel) {
         if viewModel.isLoading{
             refreshControl?.beginRefreshing()
         }else{
             refreshControl?.endRefreshing()
         }
     }
-    func display(_ viewModel: FeedErrorViewModel) {
+     public func display(_ viewModel: FeedErrorViewModel) {
         if let message = viewModel.message {
             errorView?.show(message: message)
          } else {

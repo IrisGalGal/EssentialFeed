@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import EssentialFeed
 public class RemoteFeedLoader: FeedLoader{
     private let url : URL
     private let client : HTTPClient
