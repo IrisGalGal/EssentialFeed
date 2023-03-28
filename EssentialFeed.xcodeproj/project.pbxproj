@@ -81,9 +81,7 @@
 		F0715FD029D2162100DE6A5C /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CF164C289445B5000FBE69 /* EssentialFeed.framework */; platformFilters = (ios, macos, ); };
 		F0715FD129D2162100DE6A5C /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27CF164C289445B5000FBE69 /* EssentialFeed.framework */; platformFilters = (ios, macos, ); settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F0715FD529D216A200DE6A5C /* FeedItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271F867228AD5B860014F7F1 /* FeedItemsMapper.swift */; };
-		F0715FD629D216A200DE6A5C /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FFFDB428AC25C800A506C9 /* HTTPClient.swift */; };
 		F0715FD729D216A200DE6A5C /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECC80628A0AD1400D42E98 /* RemoteFeedLoader.swift */; };
-		F0715FD829D216A200DE6A5C /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DAA88828CC546E00BE8479 /* URLSessionHTTPClient.swift */; };
 		F0715FD929D216A200DE6A5C /* RemoteFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E0C1FD28E621DE0037666F /* RemoteFeedItem.swift */; };
 		F0715FDA29D216A200DE6A5C /* RemoteFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9235C299DAFE300BA5C31 /* RemoteFeedImageDataLoader.swift */; };
 		F0715FDC29D2171200DE6A5C /* HTTPURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2703D64629A0230F00D63B6F /* HTTPURLResponse.swift */; };
@@ -91,13 +89,15 @@
 		F0715FDE29D2175B00DE6A5C /* LoadFeedFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2FEA82898D2A100728C8E /* LoadFeedFromRemoteUseCaseTests.swift */; };
 		F0715FDF29D2175B00DE6A5C /* LoadFeedImageDataFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC9100299EDFAA00DC4DDE /* LoadFeedImageDataFromRemoteUseCaseTests.swift */; };
 		F0715FE029D2178D00DE6A5C /* HTTPClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27154E05299FF50C001E9B6C /* HTTPClientSpy.swift */; };
-		F0715FE129D2179500DE6A5C /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2703D64A29A0255700D63B6F /* URLProtocolStub.swift */; };
 		F0715FE429D2195C00DE6A5C /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2717B2DE28C7DD77007867C9 /* XCTestCase+MemoryLeakTracking.swift */; };
 		F0715FE529D2196F00DE6A5C /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2723699C28EE04C000BFB1A3 /* SharedTestHelpers.swift */; };
 		F071603829D3666A00DE6A5C /* LoadImageCommentsFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071603729D3666A00DE6A5C /* LoadImageCommentsFromRemoteUseCaseTests.swift */; };
 		F071603A29D3673600DE6A5C /* RemoteImageCommentsFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071603929D3673600DE6A5C /* RemoteImageCommentsFeedLoader.swift */; };
 		F071603C29D367C200DE6A5C /* ImageCommentsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071603B29D367C200DE6A5C /* ImageCommentsMapper.swift */; };
 		F071603F29D37EAA00DE6A5C /* ImageComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071603E29D37EAA00DE6A5C /* ImageComment.swift */; };
+		F071604229D3B4AF00DE6A5C /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2703D64A29A0255700D63B6F /* URLProtocolStub.swift */; };
+		F071604729D3B54200DE6A5C /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FFFDB428AC25C800A506C9 /* HTTPClient.swift */; };
+		F071604829D3B55A00DE6A5C /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DAA88828CC546E00BE8479 /* URLSessionHTTPClient.swift */; };
 		F0B6E4AA29C4ED9000A0EF59 /* FeedLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B6E4A929C4ED9000A0EF59 /* FeedLoadingViewModel.swift */; };
 		F0B6E4AC29C4EEA700A0EF59 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B6E4AB29C4EEA700A0EF59 /* FeedViewModel.swift */; };
 		F0E7515729C3BA00007834F6 /* FeedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7515629C3BA00007834F6 /* FeedCache.swift */; };
@@ -541,6 +541,8 @@
 		27CF164E289445B5000FBE69 /* EssentialFeed */ = {
 			isa = PBXGroup;
 			children = (
+				F071604629D3B52100DE6A5C /* Shared API */,
+				F071604029D3B42800DE6A5C /* Shares API Infra */,
 				F071603D29D37E8600DE6A5C /* Image Comments Feature */,
 				27E0C1F628E612F40037666F /* Feed Cache */,
 				27CF164F289445B5000FBE69 /* EssentialFeed.h */,
@@ -644,8 +646,6 @@
 				F071603B29D367C200DE6A5C /* ImageCommentsMapper.swift */,
 				27D9235C299DAFE300BA5C31 /* RemoteFeedImageDataLoader.swift */,
 				F071603929D3673600DE6A5C /* RemoteImageCommentsFeedLoader.swift */,
-				27FFFDB428AC25C800A506C9 /* HTTPClient.swift */,
-				27DAA88828CC546E00BE8479 /* URLSessionHTTPClient.swift */,
 				F0715FBB29D215A600DE6A5C /* EssentialFeedAPI.h */,
 				F0715FBC29D215A600DE6A5C /* EssentialFeedAPI.docc */,
 			);
@@ -655,10 +655,10 @@
 		F0715FC629D215A600DE6A5C /* EssentialFeedAPITests */ = {
 			isa = PBXGroup;
 			children = (
-				F0715FE229D217A100DE6A5C /* Helpers */,
+				F071604329D3B4CA00DE6A5C /* SharedAPI Infra */,
+				F071604529D3B4F300DE6A5C /* Shared API */,
 				27B2FEA82898D2A100728C8E /* LoadFeedFromRemoteUseCaseTests.swift */,
 				F071603729D3666A00DE6A5C /* LoadImageCommentsFromRemoteUseCaseTests.swift */,
-				27DC9BD928B93F230017CE6C /* URLSessionHTTPClientTests.swift */,
 				27CC9100299EDFAA00DC4DDE /* LoadFeedImageDataFromRemoteUseCaseTests.swift */,
 			);
 			path = EssentialFeedAPITests;
@@ -668,7 +668,6 @@
 			isa = PBXGroup;
 			children = (
 				27154E05299FF50C001E9B6C /* HTTPClientSpy.swift */,
-				2703D64A29A0255700D63B6F /* URLProtocolStub.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -679,6 +678,47 @@
 				F071603E29D37EAA00DE6A5C /* ImageComment.swift */,
 			);
 			path = "Image Comments Feature";
+			sourceTree = "<group>";
+		};
+		F071604029D3B42800DE6A5C /* Shares API Infra */ = {
+			isa = PBXGroup;
+			children = (
+				27DAA88828CC546E00BE8479 /* URLSessionHTTPClient.swift */,
+			);
+			path = "Shares API Infra";
+			sourceTree = "<group>";
+		};
+		F071604329D3B4CA00DE6A5C /* SharedAPI Infra */ = {
+			isa = PBXGroup;
+			children = (
+				27DC9BD928B93F230017CE6C /* URLSessionHTTPClientTests.swift */,
+				F071604429D3B4DE00DE6A5C /* Helpers */,
+			);
+			path = "SharedAPI Infra";
+			sourceTree = "<group>";
+		};
+		F071604429D3B4DE00DE6A5C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2703D64A29A0255700D63B6F /* URLProtocolStub.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F071604529D3B4F300DE6A5C /* Shared API */ = {
+			isa = PBXGroup;
+			children = (
+				F0715FE229D217A100DE6A5C /* Helpers */,
+			);
+			path = "Shared API";
+			sourceTree = "<group>";
+		};
+		F071604629D3B52100DE6A5C /* Shared API */ = {
+			isa = PBXGroup;
+			children = (
+				27FFFDB428AC25C800A506C9 /* HTTPClient.swift */,
+			);
+			path = "Shared API";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1078,6 +1118,7 @@
 				2743E75C28FFAC5D00D41896 /* FeedStore.xcdatamodeld in Sources */,
 				27CF166728944688000FBE69 /* FeedLoader.swift in Sources */,
 				27EB4CE528EF8467005ED13E /* FeedCachePolicy.swift in Sources */,
+				F071604729D3B54200DE6A5C /* HTTPClient.swift in Sources */,
 				27E0C1FA28E613F00037666F /* FeedStore.swift in Sources */,
 				2743E7662900473300D41896 /* CoreDataFeedStore.swift in Sources */,
 				2766AB3F29B04AC100D3D61C /* CoreDataFeedStore+FeedImageDataStore.swift in Sources */,
@@ -1085,6 +1126,7 @@
 				F071603F29D37EAA00DE6A5C /* ImageComment.swift in Sources */,
 				27E0C1FC28E621B20037666F /* LocalFeedImage.swift in Sources */,
 				27E0C1F828E613520037666F /* LocalFeedLoader.swift in Sources */,
+				F071604829D3B55A00DE6A5C /* URLSessionHTTPClient.swift in Sources */,
 				27CF1665289445D8000FBE69 /* FeedImage.swift in Sources */,
 				F0E7515729C3BA00007834F6 /* FeedCache.swift in Sources */,
 				2743E76B29008B7800D41896 /* ManagedCache.swift in Sources */,
@@ -1132,7 +1174,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0715FD729D216A200DE6A5C /* RemoteFeedLoader.swift in Sources */,
-				F0715FD829D216A200DE6A5C /* URLSessionHTTPClient.swift in Sources */,
 				F0715FDC29D2171200DE6A5C /* HTTPURLResponse.swift in Sources */,
 				F0715FD929D216A200DE6A5C /* RemoteFeedItem.swift in Sources */,
 				F0715FBD29D215A600DE6A5C /* EssentialFeedAPI.docc in Sources */,
@@ -1140,7 +1181,6 @@
 				F0715FDA29D216A200DE6A5C /* RemoteFeedImageDataLoader.swift in Sources */,
 				F071603A29D3673600DE6A5C /* RemoteImageCommentsFeedLoader.swift in Sources */,
 				F071603C29D367C200DE6A5C /* ImageCommentsMapper.swift in Sources */,
-				F0715FD629D216A200DE6A5C /* HTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1148,10 +1188,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0715FE129D2179500DE6A5C /* URLProtocolStub.swift in Sources */,
 				F0715FDF29D2175B00DE6A5C /* LoadFeedImageDataFromRemoteUseCaseTests.swift in Sources */,
 				F0715FE529D2196F00DE6A5C /* SharedTestHelpers.swift in Sources */,
 				F0715FDD29D2175B00DE6A5C /* URLSessionHTTPClientTests.swift in Sources */,
+				F071604229D3B4AF00DE6A5C /* URLProtocolStub.swift in Sources */,
 				F0715FDE29D2175B00DE6A5C /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
 				F071603829D3666A00DE6A5C /* LoadImageCommentsFromRemoteUseCaseTests.swift in Sources */,
 				F0715FE029D2178D00DE6A5C /* HTTPClientSpy.swift in Sources */,
@@ -1662,7 +1702,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1693,7 +1733,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
