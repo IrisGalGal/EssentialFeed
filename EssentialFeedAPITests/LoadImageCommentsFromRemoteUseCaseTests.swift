@@ -74,13 +74,17 @@ class LoadImageCommentsFromRemoteUseCaseTests: XCTestCase {
 
               let item1 = makeItem(
                 id: UUID(),
-                imageURL: URL(string: "http://a-url.com")!)
+                message: "a message",
+                createdAt: (date: Date(timeIntervalSince1970: 1598627222), iso8601String: "2020-08-28T15:07:02+00:00"),
+                username: "username"
+              )
 
               let item2 = makeItem(
-                 id: UUID(),
-                 description: "a description",
-                 location: "a location",
-                 imageURL: URL(string: "http://another-url.com")!)
+                id: UUID(),
+                message: "another message",
+                createdAt: (date: Date(timeIntervalSince1970: 1598627222), iso8601String: "2020-08-28T15:07:02+00:00"),
+                username: "username"
+              )
             
         let items = [item1.model, item2.model]
         
@@ -117,14 +121,16 @@ class LoadImageCommentsFromRemoteUseCaseTests: XCTestCase {
     private func failure(_ error: RemoteImageCommentsFeedLoader.Error) -> RemoteImageCommentsFeedLoader.Result{
         return .failure(error)
     }
-    private func makeItem(id: UUID, description: String? = nil, location: String? = nil, imageURL: URL) -> (model: FeedImage, json: [String: Any]){
-        let item = FeedImage(id: id, description: description, location: location, url: imageURL)
-        let json = [
-           "id": item.id.uuidString,
-           "description": item.description,
-           "location": item.location,
-           "image": item.url.absoluteString
-        ].compactMapValues {$0}
+    private func makeItem(id: UUID, message: String, createdAt: (date: Date, iso8601String:String), username: String) -> (model: ImageComment, json: [String: Any]){
+        let item = ImageComment(id: id, message: message, createdAt: createdAt.date, username: username)
+        let json: [String : Any] = [
+           "id": id.uuidString,
+           "message": message,
+           "created_at": createdAt.iso8601String,
+           "author": [
+            "username": username
+           ]
+        ]
 
         return (item, json)
     }
