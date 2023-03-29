@@ -50,25 +50,24 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
                 XCTFail("Expected successful image data result, got no result instead")
             }
         }
-    private func getFeedResult(file: StaticString = #file, line:UInt = #line) -> FeedLoader.Result?{
-        let client = ephemeralClient()
-        let exp = expectation(description: "Wait for load completion")
-        
-        var receivedResult: FeedLoader.Result?
-        
-        client.get(from: feedTestServerURL) { result in
-            receivedResult = result.flatMap {(data, response) in
-                do{
-                    return .success(try FeedItemsMapper.map(data, from: response))
-                }catch{
-                    return .failure(error)
+    private func getFeedResult(file: StaticString = #file, line: UInt = #line) -> Swift.Result<[FeedImage], Error>? {
+            let client = ephemeralClient()
+            let exp = expectation(description: "Wait for load completion")
+            
+            var receivedResult: Swift.Result<[FeedImage], Error>?
+            client.get(from: feedTestServerURL) { result in
+                receivedResult = result.flatMap { (data, response) in
+                    do {
+                        return .success(try FeedItemsMapper.map(data, from: response))
+                    } catch {
+                        return .failure(error)
+                    }
                 }
+                exp.fulfill()
             }
-            exp.fulfill()
-        }
-        
-        wait(for: [exp], timeout: 20.0)
-        return receivedResult
+            wait(for: [exp], timeout: 5.0)
+            
+            return receivedResult
     }
     private func getFeedImageDataResult(file: StaticString = #file, line: UInt = #line) -> FeedImageDataLoader.Result? {
             let client = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))

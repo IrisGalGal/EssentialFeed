@@ -7,14 +7,15 @@
 
 import Foundation
 import EssentialFeed
-public class RemoteFeedLoader: FeedLoader{
+
+public class RemoteFeedLoader{
     private let url : URL
     private let client : HTTPClient
     public enum Error: Swift.Error{
         case connectivity
         case invalidData
     }
-    public typealias Result = FeedLoader.Result
+    public typealias Result = Swift.Result<[FeedImage], Error>
     public init (url: URL, client: HTTPClient){
         self.url = url
         self.client = client
