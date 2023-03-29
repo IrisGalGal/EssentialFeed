@@ -10,7 +10,7 @@ import Combine
 import EssentialFeed
 
 public extension HTTPClient {
-    typealias Publisher = AnyPublisher<Data, Error>
+    typealias Publisher = AnyPublisher<(Data, HTTPURLResponse), Error>
     
     func getPublisher(url: URL) -> Publisher {
         var task: HTTPClientTask?
