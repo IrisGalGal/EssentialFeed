@@ -37,8 +37,6 @@
 		F06512FA29CB6D7F005F122B /* HTTPClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06512F929CB6D7F005F122B /* HTTPClientStub.swift */; };
 		F06512FC29CB6E17005F122B /* InMemoryFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06512FB29CB6E17005F122B /* InMemoryFeedStore.swift */; };
 		F065130329CBE775005F122B /* UIView+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F065130229CBE775005F122B /* UIView+TestHelpers.swift */; };
-		F0715FE729D219F600DE6A5C /* EssentialFeedAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0715FE629D219F600DE6A5C /* EssentialFeedAPI.framework */; };
-		F0715FE829D219F600DE6A5C /* EssentialFeedAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F0715FE629D219F600DE6A5C /* EssentialFeedAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F0715FEB29D2379D00DE6A5C /* FeedImageDataLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0715FEA29D2379D00DE6A5C /* FeedImageDataLoaderCacheDecorator.swift */; };
 		F0715FF229D23C3F00DE6A5C /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0715FF129D23C3F00DE6A5C /* CombineHelpers.swift */; };
 		F081D21F29C67B0700946112 /* SceneDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F081D21E29C67B0700946112 /* SceneDelegateTests.swift */; };
@@ -63,7 +61,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F0715FE829D219F600DE6A5C /* EssentialFeedAPI.framework in Embed Frameworks */,
 				2766AB5B29B0614C00D3D61C /* EssentialFeed.framework in Embed Frameworks */,
 				2766AB5F29B0615100D3D61C /* EssentialFeediOS.framework in Embed Frameworks */,
 			);
@@ -125,7 +122,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0715FE729D219F600DE6A5C /* EssentialFeedAPI.framework in Frameworks */,
 				2766AB5A29B0614C00D3D61C /* EssentialFeed.framework in Frameworks */,
 				2766AB5E29B0615100D3D61C /* EssentialFeediOS.framework in Frameworks */,
 			);
