@@ -7,7 +7,6 @@
 
 import XCTest
 import EssentialFeed
-import EssentialFeedAPI
 
 class EssentialFeedAPIEndToEndTests: XCTestCase {
 
@@ -137,3 +136,4 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
         return URL(string: "https://url-\(index+1).com")!
     }
 }
+
