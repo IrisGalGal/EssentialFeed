@@ -1,8 +1,9 @@
 //
-//  FeedItemsMapperTests.swift
+//  FeedItemsMapperTests
+
 //  EssentialFeedTests
 //
-//  Created by Iris GalGal on 29/03/23.
+//  Created by IrisGal on 01/08/22.
 //
 
 import XCTest
