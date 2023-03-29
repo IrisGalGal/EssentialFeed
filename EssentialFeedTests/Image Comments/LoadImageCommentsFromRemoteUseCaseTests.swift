@@ -9,30 +9,7 @@ import XCTest
 import EssentialFeed
 
 class LoadImageCommentsFromRemoteUseCaseTests: XCTestCase {
-    
-    func test_init_doesNotRequestDataFromURL(){
-        let (_, client) = makeSUT()
-        XCTAssertTrue(client.requestedURLs.isEmpty)
-    }
-    
-    func test_load_requestsDataFromURL(){
-        let (_, client) = makeSUT()
-        XCTAssertTrue(client.requestedURLs.isEmpty)
-    }
-    
-    func test_loadTwice_requestsDataFromURLTwice(){
-        let url = URL(string: "https://a-given-url.com")!
-        let (sut, client) = makeSUT(url: url)
-        sut.load{ _ in }
-        XCTAssertEqual(client.requestedURLs, [url])
-    }
-    func test_load_deliversErrorOnClientError(){
-        let (sut, client) = makeSUT()
-        expect(sut, toCompleteWith: failure(.connectivity)) {
-            let clientError = NSError(domain: "Test", code: 0)
-            client.complete(with: clientError)
-        }
-    }
+ 
     func test_load_deliversErrorOnNon2xxHTTPResponse(){
         let (sut, client) = makeSUT()
         let samples = [199,150,300,400,500]
@@ -97,17 +74,7 @@ class LoadImageCommentsFromRemoteUseCaseTests: XCTestCase {
         }
             
          }
-    func test_load_doesNotDeliverResultAfterSUTInstanceHAsBeenDeallocated(){
-        let url = URL(string: "http://a-url.com")!
-        let client = HTTPClientSpy()
-        var sut : RemoteImageCommentsFeedLoader? = RemoteImageCommentsFeedLoader(url: url, client: client)
-        var capturedResults = [RemoteImageCommentsFeedLoader.Result]()
-        sut?.load(completion: { capturedResults.append($0) })
-        sut = nil
-        client.complete(withStatusCode: 200, data: makeItemsJSON([]))
-        XCTAssertTrue(capturedResults.isEmpty)
-    }
-    
+  
     private func makeSUT(url: URL = URL(string: "https://a-given-url.com")!, file: StaticString = #filePath, line: UInt = #line) -> (sut: RemoteImageCommentsFeedLoader, client: HTTPClientSpy){
         let client = HTTPClientSpy()
         let sut = RemoteImageCommentsFeedLoader(url: url, client: client)
