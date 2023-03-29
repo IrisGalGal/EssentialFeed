@@ -34,7 +34,7 @@ public class RemoteFeedLoader: FeedLoader{
     private static func map(_ data: Data, from response: HTTPURLResponse) -> Result{
         do{
             let items = try FeedItemsMapper.map(data, from: response)
-            return .success(items.toModels())
+            return .success(items)
         }catch{
             return .failure(error)
         }
