@@ -7,10 +7,3 @@
 
 import EssentialFeed
 
-public typealias RemoteImageCommentsFeedLoader = RemoteLoader<[ImageComment]>
-
-public extension RemoteImageCommentsFeedLoader{
-    convenience init(url: URL, client: HTTPClient) {
-        self.init(url:url, client: client, mapper: ImageCommentsMapper.map)
-    }
-}
