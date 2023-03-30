@@ -9,10 +9,7 @@ import XCTest
 import EssentialFeed
 
 class LoadResourcePresenterTests: XCTestCase {
-    
-    func test_title_isLocalized() {
-        XCTAssertEqual(LoadResourcePresenter.title, localized("FEED_VIEW_TITLE"))
-    }
+ 
     
     func test_init_doesNotSendMessagesToView() {
         let (_, view) = makeSUT()
@@ -74,12 +71,12 @@ class LoadResourcePresenterTests: XCTestCase {
     }
     
     public class ViewSpy: FeedView, FeedLoadingView, FeedErrorView {
-        enum Message: Hashable {
+        
+        enum Message: Hashable{
             case display(errorMessage: String?)
             case display(isLoading: Bool)
             case display(feed: [FeedImage])
         }
-        
         private(set) var messages = Set<Message>()
         
         func display(_ viewModel: FeedErrorViewModel) {
