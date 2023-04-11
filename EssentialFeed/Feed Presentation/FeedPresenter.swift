@@ -9,15 +9,13 @@ import Foundation
 public protocol FeedView{
     func display(_ viewModel: FeedViewModel)
 }
-public protocol FeedErrorView {
-    func display(_ viewModel: FeedErrorViewModel)
-}
+
 public final class FeedPresenter{
     private let feedView: FeedView
     private let loadingView: ResourceLoadingView
-    private let errorView: FeedErrorView
+    private let errorView: ResourceErrorView
 
-    public init(feedView: FeedView, loadingView: ResourceLoadingView, errorView: FeedErrorView) {
+    public init(feedView: FeedView, loadingView: ResourceLoadingView, errorView: ResourceErrorView) {
         self.feedView = feedView
         self.loadingView = loadingView
         self.errorView = errorView
@@ -29,7 +27,7 @@ public final class FeedPresenter{
         return NSLocalizedString("GENERIC_CONNECTION_ERROR", tableName: "Feed", bundle: Bundle(for: FeedPresenter.self), comment: "Error message displayed when we can't load the image feed from the server")
     }
     public func didStartLoadingFeed() {
-        errorView.display(FeedErrorViewModel(message: nil))
+        errorView.display(ResourceErrorViewModel(message: nil))
         loadingView.display(ResourceLoadingViewModel(isLoading: true))
     }
 
@@ -40,7 +38,7 @@ public final class FeedPresenter{
 
     public func didFinishLoadingFeed(with error: Error) {
         loadingView.display(ResourceLoadingViewModel(isLoading: false))
-        errorView.display(FeedErrorViewModel(message: FeedPresenter.errorTitle))
+        errorView.display(ResourceErrorViewModel(message: FeedPresenter.errorTitle))
     }
 
 }

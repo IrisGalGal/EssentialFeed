@@ -15,10 +15,10 @@ public final class LoadResourcePresenter<Resource, View: ResourceView>{
 
     private let resourceView: View
     private let loadingView: ResourceLoadingView
-    private let errorView: FeedErrorView
+    private let errorView: ResourceErrorView
     private let mapper: Mapper
 
-    public init(resourceView: View, loadingView: ResourceLoadingView, errorView: FeedErrorView, mapper: @escaping Mapper) {
+    public init(resourceView: View, loadingView: ResourceLoadingView, errorView: ResourceErrorView, mapper: @escaping Mapper) {
         self.resourceView = resourceView
         self.loadingView = loadingView
         self.errorView = errorView
@@ -32,7 +32,7 @@ public final class LoadResourcePresenter<Resource, View: ResourceView>{
                                  comment: "Error message displayed when we can't resource the image feed from the server")
     }
     public func didStartLoading() {
-        errorView.display(FeedErrorViewModel(message: nil))
+        errorView.display(ResourceErrorViewModel(message: nil))
         loadingView.display(ResourceLoadingViewModel(isLoading: true))
     }
 
@@ -43,7 +43,7 @@ public final class LoadResourcePresenter<Resource, View: ResourceView>{
 
     public func didFinishLoading(with error: Error) {
         loadingView.display(ResourceLoadingViewModel(isLoading: false))
-        errorView.display(FeedErrorViewModel(message: FeedPresenter.errorTitle))
+        errorView.display(ResourceErrorViewModel(message: FeedPresenter.errorTitle))
     }
 
 }

@@ -4,6 +4,6 @@
 
 import Foundation
 
-public struct FeedErrorViewModel {
+public struct ResourceErrorViewModel {
 	public let message: String?
 }
