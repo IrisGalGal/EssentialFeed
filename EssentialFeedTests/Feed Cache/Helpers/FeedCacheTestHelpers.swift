@@ -8,8 +8,6 @@
 import Foundation
 import EssentialFeed
 
-
-
  func uniqueImage() -> FeedImage{
     return FeedImage(id: UUID(), description: "any", location: "any", url: anyURL())
 }
@@ -26,14 +24,4 @@ import EssentialFeed
      private var feedCacheMaxAgeInDays: Int {
          return 7
      }
-     private func adding(days: Int) -> Date{
-        return Calendar(identifier: .gregorian).date(byAdding: .day, value: days, to: self)!
-     }
  }
-
-extension Date{
-     func adding(seconds: TimeInterval) -> Date{
-        return self + seconds
-     }
-}
-
