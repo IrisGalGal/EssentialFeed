@@ -31,9 +31,9 @@ public final class ErrorView: UIButton {
         titleLabel?.textColor = .white
         titleLabel?.textAlignment = .center
         titleLabel?.numberOfLines = 0
-        titleLabel?.font = .systemFont(ofSize: 17)
-        
-        contentEdgeInsets = .init(top: 8, left: 8, bottom: 8, right: 8 )
+        titleLabel?.font = .preferredFont(forTextStyle: .body)
+        configuration?.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
+        titleLabel?.adjustsFontForContentSizeCategory = true
         
     }
 
@@ -73,7 +73,7 @@ public final class ErrorView: UIButton {
     private func hideMessage(){
         setTitle(nil, for: .normal)
         alpha = 0
-        contentEdgeInsets = .init(top: -2.5, left: 0, bottom: -2.5, right: 0)
+        configuration?.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
         onHide?()
     }
 }
