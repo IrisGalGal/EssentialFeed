@@ -69,11 +69,7 @@ import EssentialFeed
     }
      public func display(_ viewModel: ResourceErrorViewModel) {
          errorView.message = viewModel.message
-        /* if let message = viewModel.message {
-             errorView.showAnimated(message: message)
-          } else {
-              errorView.hideMessageAnimated()
-          }*/
+
     }
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
