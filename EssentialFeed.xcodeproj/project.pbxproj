@@ -103,6 +103,8 @@
 		F071605729D3B8AF00DE6A5C /* RemoteFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9235C299DAFE300BA5C31 /* RemoteFeedImageDataLoader.swift */; };
 		F071605829D3B8B800DE6A5C /* HTTPURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2703D64629A0230F00D63B6F /* HTTPURLResponse.swift */; };
 		F071606129D4A91A00DE6A5C /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2703D64A29A0255700D63B6F /* URLProtocolStub.swift */; };
+		F0A67C6C2A12D7B1005815A6 /* LoadMoreCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A67C6B2A12D7B1005815A6 /* LoadMoreCellController.swift */; };
+		F0A67C6E2A12F69F005815A6 /* LoadMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A67C6D2A12F69F005815A6 /* LoadMoreCell.swift */; };
 		F0C1D4F629EFA92700BB5FFF /* ListSnapShotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1D4F529EFA92700BB5FFF /* ListSnapShotTests.swift */; };
 		F0C1D4FC29F06CBC00BB5FFF /* ImageCommentsSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1D4FB29F06CBC00BB5FFF /* ImageCommentsSnapshotTests.swift */; };
 		F0C1D50129F06EBA00BB5FFF /* ImageCommentCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1D50029F06EBA00BB5FFF /* ImageCommentCellController.swift */; };
@@ -271,6 +273,8 @@
 		F071603929D3673600DE6A5C /* RemoteImageCommentsFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageCommentsFeedLoader.swift; sourceTree = "<group>"; };
 		F071603B29D367C200DE6A5C /* ImageCommentsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsMapper.swift; sourceTree = "<group>"; };
 		F071603E29D37EAA00DE6A5C /* ImageComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageComment.swift; sourceTree = "<group>"; };
+		F0A67C6B2A12D7B1005815A6 /* LoadMoreCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreCellController.swift; sourceTree = "<group>"; };
+		F0A67C6D2A12F69F005815A6 /* LoadMoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreCell.swift; sourceTree = "<group>"; };
 		F0B6E4A929C4ED9000A0EF59 /* ResourceLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoadingViewModel.swift; sourceTree = "<group>"; };
 		F0B6E4AB29C4EEA700A0EF59 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		F0C1D4F529EFA92700BB5FFF /* ListSnapShotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSnapShotTests.swift; sourceTree = "<group>"; };
@@ -420,6 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				274FE05D290B04F700CB3DA2 /* FeedImageCellController.swift */,
+				F0A67C6B2A12D7B1005815A6 /* LoadMoreCellController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -429,6 +434,7 @@
 			children = (
 				F04EF1FA29C92F5000100B16 /* Helpers */,
 				270E33D42909AAD000ACA209 /* FeedImageCell.swift */,
+				F0A67C6D2A12F69F005815A6 /* LoadMoreCell.swift */,
 				27B5B2762914442B00BD78E3 /* Feed.storyboard */,
 				27B5B2792914446500BD78E3 /* Feed.xcassets */,
 			);
@@ -1111,11 +1117,13 @@
 				270E33D72909F12B00ACA209 /* UIView+Shimmering.swift in Sources */,
 				27B075D12915779D00E4743C /* UITableView+Dequeueing.swift in Sources */,
 				F04EF1FC29C92FA400100B16 /* UITableView+HeaderSizing.swift in Sources */,
+				F0A67C6C2A12D7B1005815A6 /* LoadMoreCellController.swift in Sources */,
 				270E33D32908B29300ACA209 /* ListViewController.swift in Sources */,
 				F0C1D50829F1095F00BB5FFF /* CellController.swift in Sources */,
 				270E33D52909AAD000ACA209 /* FeedImageCell.swift in Sources */,
 				274FE05E290B04F700CB3DA2 /* FeedImageCellController.swift in Sources */,
 				F04EF1FE29C9329300100B16 /* ErrorView.swift in Sources */,
+				F0A67C6E2A12F69F005815A6 /* LoadMoreCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
