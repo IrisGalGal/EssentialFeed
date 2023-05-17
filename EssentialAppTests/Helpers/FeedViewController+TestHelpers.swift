@@ -110,7 +110,24 @@ extension ListViewController {
         return simulateFeedImageViewVisible(at: index)?.renderedImage
     }
     
-    private var feedImagesSection: Int {
-        return 0
+    func simulateLoadMoreFeedAction(){
+        guard let view = cell(row: 0, section: feedLoadMoreSection) else {return}
+        
+        let delegate = tableView.delegate
+        let index = IndexPath(row: 0, section: feedLoadMoreSection)
+        delegate?.tableView?(tableView, willDisplay: view, forRowAt: index)
     }
+    func cell(row: Int, section: Int) -> UITableViewCell?{
+        guard numberOfRows(in: section) > row else{
+            return nil
+        }
+        let ds = tableView.dataSource
+        let index = IndexPath(row: row, section: section)
+        return ds?.tableView(tableView, cellForRowAt: index)
+    }
+    func numberOfRows(in section: Int) -> Int {
+        tableView.numberOfSections > section ? tableView.numberOfRows(inSection: section) : 0
+    }
+    private var feedImagesSection: Int { 0 }
+    private var feedLoadMoreSection: Int { 1 }
 }
