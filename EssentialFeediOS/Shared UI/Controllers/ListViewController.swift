@@ -98,7 +98,7 @@ import EssentialFeed
     }
     public func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         indexPaths.forEach { indexPath in
-            let dsp = cellController(at: indexPath)?.datasourcePrefetching
+            let dsp = cellController(at: indexPath)?.dataSourcePrefetching
             dsp?.tableView(tableView, prefetchRowsAt: [indexPath])
         }
     }
@@ -108,7 +108,7 @@ import EssentialFeed
     
     public func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
         indexPaths.forEach { indexPath in
-            let dsp = cellController(at: indexPath)?.datasourcePrefetching
+            let dsp = cellController(at: indexPath)?.dataSourcePrefetching
             dsp?.tableView(tableView, prefetchRowsAt: [indexPath])
         }
     }
