@@ -22,8 +22,6 @@ class CommentsUIIntegrationTests: XCTestCase {
         XCTAssertEqual(sut.title, commentsTitle)
     }
     
-
-    
     func test_loadCommentsActions_requestCommentsFromLoader() {
         let (sut, loader) = makeSUT()
         XCTAssertEqual(loader.loadCommentsCallCount, 0, "Expected no loading requests before view is loaded")
@@ -207,8 +205,8 @@ class CommentsUIIntegrationTests: XCTestCase {
         }
         
         func completeCommentsLoadingWithError(at index: Int = 0) {
-            let error = NSError(domain: "an error", code: 0)
-            requests[index].send(completion: .failure(error))
+            requests[index].send(completion: .failure(anyNSError()))
         }
     }
 }
+

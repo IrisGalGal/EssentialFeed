@@ -18,10 +18,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }()
     
     private lazy var logger = Logger(subsystem: "com.essentialdeveloper.EssentialAppCaseStudy", category: "main")
+    
     private lazy var store: FeedStore & FeedImageDataStore = {
-        do{
-            return try CoreDataFeedStore(storeURL: NSPersistentContainer.defaultDirectoryURL())
-        }catch{
+        do {
+            return try CoreDataFeedStore(
+                storeURL: NSPersistentContainer
+                    .defaultDirectoryURL()
+                    .appendingPathComponent("feed-store.sqlite"))
+        } catch {
             assertionFailure("Failed to instantiate CoreData store with error: \(error.localizedDescription)")
             logger.fault("Failed to instantiate CoreData store with error: \(error.localizedDescription)")
             return NullStore()
