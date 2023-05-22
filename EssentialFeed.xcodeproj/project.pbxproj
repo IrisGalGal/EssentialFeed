@@ -834,7 +834,6 @@
 			isa = PBXGroup;
 			children = (
 				F0C1D50029F06EBA00BB5FFF /* ImageCommentCellController.swift */,
-				F0C1D50529F0C3CB00BB5FFF /* ImageCommentCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -843,6 +842,7 @@
 			isa = PBXGroup;
 			children = (
 				F0C1D50329F0A6AF00BB5FFF /* ImageComments.storyboard */,
+				F0C1D50529F0C3CB00BB5FFF /* ImageCommentCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
