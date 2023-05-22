@@ -6,15 +6,16 @@
 //
 
 import Foundation
+import EssentialFeed
 
-public class RemoteFeedLoader: FeedLoader{
+public class RemoteFeedLoader{
     private let url : URL
     private let client : HTTPClient
     public enum Error: Swift.Error{
         case connectivity
         case invalidData
     }
-    public typealias Result = LoadFeedResult
+    public typealias Result = Swift.Result<[FeedImage], Error>
     public init (url: URL, client: HTTPClient){
         self.url = url
         self.client = client
@@ -25,11 +26,18 @@ public class RemoteFeedLoader: FeedLoader{
             guard self != nil else { return }
             switch result{
             case let .success(data, response):
-                completion(FeedItemsMapper.map(data, from: response))
+                completion(RemoteFeedLoader.map(data, from: response))
             case .failure:
                 completion(.failure(RemoteFeedLoader.Error.connectivity))
             }
         }
     }
-    
+    private static func map(_ data: Data, from response: HTTPURLResponse) -> Result{
+        do{
+            let items = try FeedItemsMapper.map(data, from: response)
+            return .success(items)
+        }catch{
+            return .failure(error)
+        }
+    }
 }

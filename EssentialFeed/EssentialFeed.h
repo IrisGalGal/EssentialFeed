@@ -2,7 +2,7 @@
 //  EssentialFeed.h
 //  EssentialFeed
 //
-//  Created by IrisDarka on 29/07/22.
+//  Created by IrisGal on 29/07/22.
 //
 
 #import <Foundation/Foundation.h>
